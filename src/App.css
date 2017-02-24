@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
 
 .App-header {
   background-color: #222;
@@ -14,11 +10,24 @@
   color: white;
 }
 
-.App-intro {
-  font-size: large;
-}
+.TVcontainer{
+  display: flex;
+  flex-wrap: wrap;
+  border:solid;
+  border-color: Black;
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+}
+.playerContainer{
+  width: 80%;
+  height: 800px;
+  background-color: #bbb;
+  display:block;
+  border:solid;
+  border-color: Black;
+
+}
+.channelSelector{
+  width: 19.5%;
+  height:800px;
+  background-color: #999;
 }
