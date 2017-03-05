@@ -31,3 +31,11 @@
   height:800px;
   background-color: #999;
 }
+.favorits{
+  width:90%;
+  height:100px;
+  background-color:#bbb;
+  border:solid;
+  border-color: #999;
+  margin: auto;
+}
