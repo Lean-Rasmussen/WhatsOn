@@ -38,6 +38,7 @@
   border:solid;
   border-color: #999;
   margin: auto;
+  list-style-type: none;
 }
 .streamImg{
   max-height: 80px;
