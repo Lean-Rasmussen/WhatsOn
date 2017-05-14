@@ -2,7 +2,12 @@ import React from 'react';
 
 export default class Favorits extends React.Component{
 
-
+changeChannel=function(index){
+  console.log(index)
+  this.setState({
+    activeStream:this.props.favorits[index].link
+  })
+}
 
 
 	render(){
@@ -13,7 +18,7 @@ export default class Favorits extends React.Component{
               return(
                 <li onClick={()=> this.changeChannel(index)} className='favorits' id={channel.id}>
                   <img className='streamImg' src={channel.img} role='presentation'></img>
-                <span>{channel.name}</span></li>
+                <p>{channel.name}</p></li>
               )}
               )
               }

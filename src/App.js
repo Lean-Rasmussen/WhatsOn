@@ -6,7 +6,7 @@ import Favorits from './components/Favorits'
 import Player from './components/Player'
 import SaveLoadFavorits from './components/SaveLoadFavorits'
 import Search from './components/Search'
-
+import TwitchSearch from './services/RetrieveTwitchData'
 
 
 
@@ -14,7 +14,14 @@ import Search from './components/Search'
     constructor(props){
     super(props)
     this.state={
+//State for player      
       activeStream:'http://player.twitch.tv/?channel=medrybw&muted=true',
+
+//State for Search      
+      streamProviders:['Twitch', 'YouTube'],
+      searchingStream:'',
+
+// State for favorits
       favorits:[
                 {name:"Jeffs channel",
                 id:112,
@@ -58,7 +65,8 @@ changeChannel(indexOfSelectedChannel){
           <h2>Welcome to Whats On</h2>
           <p>find your favorit streams across platforms</p> 
         </div>
-        <Search/>
+        <Search streamProviders ={this.state.streamProviders}/>
+        <TwitchSearch/>
         <div className='TVcontainer'>
           <Player activeStream={this.state.activeStream} /> 
           <div  className='channelSelector'>

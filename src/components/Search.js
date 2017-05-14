@@ -1,18 +1,28 @@
 import React from 'react';
 
 class Search extends React.Component {
+
+selectStreamProvider= ()=>{
+  let searchStreamProvider=document.getElementById('selectStreamProvider').value;
+  let searchTerm=document.getElementById('searchTerm').value;
+  console.log( searchStreamProvider + searchTerm)
+}
+
+
+
+
   render() {
     return (
 			<from>
-        <label> Search Stuffs</label>
-          <select>
-            <option>Twitch</option>
-            <option>YouTube</option>
+        <label> Search</label>
+          <select id='selectStreamProvider' onClick={()=>this.selectStreamProvider()} >
+          {this.props.streamProviders.map(function(streamProvider, index){
+            return(
+                <option id={index}>{streamProvider}</option>
+              )
+          }
+            )}
           </select>
-          <label>Enter name for favorits</label>
-          <input id='streamNameInput' type='add'></input> 
-     	  <button>Add to favorits</button>
-
     </from>
     );
   }

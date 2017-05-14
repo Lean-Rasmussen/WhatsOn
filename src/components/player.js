@@ -13,10 +13,6 @@ export default class Player extends React.Component{
             </div>
           </div> 
          </div>  
-
-
-
 			)
 	}
-
 }
